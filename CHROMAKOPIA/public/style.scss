@@ -1,11 +1,15 @@
 @import "stylevariables";
+@import url('https://fonts.cdnfonts.com/css/rift-soft-2');
 
 body{
     background-color: $background-color;
+    margin: 0;
+    padding: 0;
 }
 .header{
     flex-wrap: nowrap;
     justify-content: center;
+    justify-content: space-around;
     margin: auto;
     display: flex;
     background-color: $header-color;
@@ -13,5 +17,13 @@ body{
     img{
         width: 300px;
         height: 50px;
+    }
+    .option{
+        font-family: $font-family1;
+        padding-top: 15px;
+        font-family: 'Rift Soft', sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 150%;
     }
 }
