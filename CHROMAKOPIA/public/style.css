@@ -3,6 +3,15 @@ body {
   background-color: #01823E;
   margin: 0;
   padding: 0;
+  transition-duration: 0.5s;
+}
+body h1 {
+  font-family: "Rift Soft", sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+body h2 {
+  font-family: "Rift Soft", sans-serif;
 }
 
 .header {
@@ -13,16 +22,300 @@ body {
   display: flex;
   background-color: black;
   color: #01823E;
+  transition-duration: 0.5s;
 }
 .header img {
   width: 300px;
   height: 50px;
 }
 .header .option {
-  font-family: rift-soft, sans-serif;
-  padding-top: 15px;
   font-family: "Rift Soft", sans-serif;
+  padding-top: 15px;
   font-weight: 700;
   font-style: normal;
   font-size: 150%;
+}
+
+.fixed-image {
+  border-bottom: solid 5px black;
+  position: fixed;
+  z-index: 2;
+  bottom: 10px;
+  left: 10px;
+  height: 300px;
+  transition-duration: 0.5s;
+}
+
+.fixed-text {
+  position: fixed;
+  z-index: 2;
+  bottom: 10px;
+  right: 10px;
+}
+
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background-color: black;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll(y);
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+.youtube-video {
+  margin: 0 auto;
+}
+
+.youtube-video iframe {
+  border: solid 5px black;
+  transition-duration: 0.5s;
+}
+
+.youtube {
+  margin-top: 300px;
+  text-align: center;
+  justify-content: center;
+}
+.youtube button {
+  font-family: "Rift Soft", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border: solid 2px black;
+  background-color: #01823E;
+  color: black;
+  transition-duration: 0.5s;
+}
+.youtube button:hover {
+  background-color: black;
+  color: #01823E;
+  transition-duration: 0.5s;
+}
+
+.shop {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.vinyl {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  adding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.vinyl #vinyl1 {
+  box-shadow: 10px 5px 5px black;
+  border-radius: 50%;
+}
+.vinyl #vinyl2 {
+  box-shadow: 10px 5px 5px black;
+}
+
+.merchandise {
+  display: grid;
+}
+.merchandise #merch1 {
+  grid-column: 1/span 2;
+  grid-row: 1;
+}
+.merchandise #merch2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.merchandise #merch3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.merchandise > a {
+  filter: drop-shadow(10px 10px 4px black);
+}
+
+.tickets {
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-bottom: 200px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.tickets > div {
+  border-top: solid 2px black;
+  padding: 10px;
+}
+.tickets > div button {
+  font-family: "Rift Soft", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: solid 2px black;
+  background-color: #01823E;
+  color: black;
+  transition-duration: 0.5s;
+}
+.tickets > div button:hover {
+  background-color: black;
+  color: #01823E;
+  transition-duration: 0.5s;
+}
+
+.theme-button {
+  padding: 30px;
+}
+.theme-button button {
+  border: solid 5px black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #01823E;
+  transition-duration: 0.5s;
+}
+
+.darkmode {
+  background-color: black;
+  color: #01823E;
+  transition-duration: 0.5s;
+}
+.darkmode .header {
+  background-color: #01823E;
+  color: black;
+  transition-duration: 1s;
+}
+.darkmode .scroll-watcher {
+  background-color: #01823E;
+}
+.darkmode .youtube-video iframe {
+  border: solid 5px #01823E;
+  transition-duration: 0.5s;
+}
+.darkmode .youtube button {
+  border: solid 2px #01823E;
+  background-color: black;
+  color: #01823E;
+}
+.darkmode .youtube button:hover {
+  background-color: #01823E;
+  color: black;
+}
+.darkmode .fixed-image {
+  border-bottom: solid 5px #01823E;
+  transition-duration: 0.5s;
+}
+.darkmode .tickets > div {
+  border-top: solid 2px #01823E;
+}
+.darkmode .tickets > div button {
+  border: solid 2px #01823E;
+  background-color: black;
+  color: #01823E;
+}
+.darkmode .tickets > div button:hover {
+  background-color: #01823E;
+  color: black;
+}
+.darkmode .theme-button button {
+  border: solid 5px #01823E;
+  background-color: black;
+  transition-duration: 1s;
+}
+
+@media only screen and (max-width: 1099px) {
+  body h1 {
+    font-size: 40px;
+  }
+  .header .option {
+    display: none;
+  }
+  .header .logo {
+    padding-top: 50px;
+  }
+  .header .logo img {
+    width: 700px;
+    height: auto;
+  }
+  .fixed-image img {
+    width: 200px;
+    height: auto;
+  }
+  .youtube iframe {
+    width: 700px;
+    height: 394px;
+  }
+  .youtube button {
+    font-size: 20px;
+  }
+  .vinyl {
+    display: grid;
+  }
+  .vinyl #vinylcontainer1 {
+    padding-bottom: 50px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .vinyl #vinylcontainer2 {
+    padding-bottom: 50px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .vinyl #vinylcontainer3 {
+    padding-bottom: 50px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .merchandise #merch1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .merchandise #merch2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .merchandise #merch3 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .tickets {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media only screen and (max-width: 711px) {
+  .header .logo {
+    height: 100px;
+    padding-top: 20px;
+  }
+  .header .logo img {
+    width: 500px;
+    height: auto;
+  }
+  .youtube {
+    margin-top: 100px;
+  }
+  .youtube iframe {
+    width: 500px;
+    height: 281px;
+  }
+  .fixed-image img {
+    width: 130px;
+    height: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

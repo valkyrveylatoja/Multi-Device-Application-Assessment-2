@@ -2,19 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHROMAKOPIA</title>
+    <link rel="icon" type="image/x-icon" href="Assets/albumCover.jpg">
     <link rel="stylesheet" href="style.css">
+    <script src="../webapp.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
+    <!-- header -->
     <div class="header">
         <div class="option">SHOP</div>
         <div class="option">LISTEN</div>
         <div class="logo">
-            <img src="logoGREEN.png">
+            <img id="logo" src="Assets/logoGREEN.png">
         </div>
         <div class="option">WATCH</div>
-        <div class="option">GENERATOR</div>
+        <div class="option">TICKETS</div>
+    </div>
+
+    <!-- portrait of tyler that follows you/ fixed text -->
+    <div class="fixed-image">
+        <a href = "https://en.wikipedia.org/wiki/Tyler,_the_Creator">
+            <img class="fixed-image" src="Assets/tylerPortrait.png">
+        </a>
+    </div>
+    <div class="fixed-text">
+        <h1>fan-made website by val</h1>
+    </div>
+
+    <!-- scroll watcher -->
+    <div class="scroll-watcher"></div>
+
+    <!-- theme button -->
+    <div class="theme">
+        <div class="theme-button">
+            <button type="button" onclick="myFunction();changeImage()"></button>
+        </div>
+    </div>
+
+    <!-- youtube video -->
+    <div class="youtube">
+
+        <!-- video embed -->
+        <div class="youtube-video">
+            <iframe width="1020" height="574" src="https://www.youtube.com/embed/gkZ4dLMH-B8?si=0gqFhN45KqNg3rBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- link to other music platforms -->
+        <button type="button" onclick="location.href='https://tylerthecreator.lnk.to/chromakopia'">LISTEN NOW</button> 
+    
+    </div>
+    
+    <br>
+    <br>
+
+    <!-- shop -->
+    <div class="shop">
+
+        <!-- vinyl -->
+        <h1> VINYL </h1>
+
+        <div class="vinyl">
+            <a id="vinylcontainer1" href="https://tylerthecreatorshops.com/product/vinyl/">
+                <img id="vinyl2" src="Assets/vinyl2.png">
+            </a>
+            <a id="vinylcontainer2" href="https://tylerthecreatorshops.com/product/vinyl/">
+                <img id="vinyl1" src="Assets/vinyl1.png">
+            </a>
+            <a id="vinylcontainer3" href="https://tylerthecreatorshops.com/product/vinyl/">
+                <img id="vinyl2" src="Assets/vinyl3.png">
+            </a>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- merchandise -->
+        <h1>MERCHANDISE</h1>
+
+        <div class="merchandise">
+            <a id="merch1" href="https://shoptylerthecreatormerch.com/chromakopia-t-shirt-chro2/">
+                <img  src="Assets/merch1.png">
+            </a>
+            <a id="merch2" href="https://chromakopiamerch.com/products/chromakopia-merch-chromakopia-green-tour-hoodie">
+                <img  src="Assets/merch2.png">
+            </a>
+            <a id="merch3" href="https://chromakopiamerch.com/products/chromakopia-merch-chromakopia-green-tour-tee">
+                <img  src="Assets/merch3.png">
+            </a>
+        </div>
+
+        <!-- tickets -->
+        <h1>TICKETS</h1>
+        <div class="tickets">
+            <div class="tour1">
+                <h2>DUBAI, STADIUM</h2>
+                <h2>FEB 30 2025</h2>
+                <button>TICKETS</button>
+            </div>
+            <div class="tour2">
+                <h2>DUBAI, BURJ KHALIFA</h2>
+                <h2>MARCH 33 2025</h2>
+                <button>TICKETS</button>
+            </div>
+            <div class="tour3">
+                <h2>DUBAI, AL GHURAIR CENTER</h2>
+                <h2>SEPTEMBER 28 2025</h2>
+                <button>TICKETS</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

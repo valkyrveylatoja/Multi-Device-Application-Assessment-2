@@ -2,9 +2,19 @@
 @import url('https://fonts.cdnfonts.com/css/rift-soft-2');
 
 body{
-    background-color: $background-color;
+    background-color: $primary-color;
     margin: 0;
     padding: 0;
+
+    h1{
+        font-family: $font-family1;
+        text-align: center;
+        font-size: 50px;
+    }
+    h2{
+        font-family: $font-family1;
+    }
+    transition-duration: 0.5s;
 }
 .header{
     flex-wrap: nowrap;
@@ -12,8 +22,8 @@ body{
     justify-content: space-around;
     margin: auto;
     display: flex;
-    background-color: $header-color;
-    color: $text-color1;
+    background-color: $secondary-color;
+    color: $primary-color;
     img{
         width: 300px;
         height: 50px;
@@ -21,9 +31,318 @@ body{
     .option{
         font-family: $font-family1;
         padding-top: 15px;
-        font-family: 'Rift Soft', sans-serif;
         font-weight: 700;
         font-style: normal;
         font-size: 150%;
+    }
+    transition-duration: 0.5s;
+}
+
+// tyler portrait fixed position/ fixed text
+.fixed-image{
+    border-bottom: solid 5px black;
+    position: fixed;
+    z-index: 2;
+    bottom: 10px;
+    left: 10px;
+    height: 300px;
+    transition-duration: 0.5s;
+}
+.fixed-text{
+    position: fixed;
+    z-index: 2;
+    bottom: 10px;
+    right: 10px;
+}
+
+// scroll watcher for images in shop div
+.scroll-watcher{
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: $secondary-color;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(y);
+}
+@keyframes scroll-watcher{
+    to { scale: 1 1; }
+}
+
+// youtube & listen button
+.youtube-video{
+    margin: 0 auto;
+}
+.youtube-video iframe{
+    border: solid 5px black;
+    transition-duration: 0.5s;
+}
+.youtube{
+    margin-top: 300px;
+    text-align: center;
+    justify-content: center;
+    button{
+        font-family: $font-family1;
+        font-weight: bold;
+        font-size: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+        border: solid 2px black;
+        background-color: $primary-color;
+        color: $secondary-color;
+        transition-duration: 0.5s;
+    }
+    button:hover{
+        background-color: $secondary-color;
+        color: $primary-color;
+        transition-duration: 0.5s;
+    }
+}
+
+// shop
+.shop{
+    margin-top: 200px;
+    text-align: center;
+}
+@mixin shop_layout{ 
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    adding-bottom: 50px;
+}
+.vinyl{
+    @include shop_layout;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    #vinyl1{
+        box-shadow: 10px 5px 5px black;
+        border-radius: 50%;
+    }
+    #vinyl2{
+        box-shadow: 10px 5px 5px black;
+    }
+}
+.merchandise{
+    display: grid;
+    #merch1{
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    #merch2{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #merch3{
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+.merchandise > a {
+    filter: drop-shadow(10px 10px 4px black);
+}
+
+.tickets{
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    padding: 10px; 
+}
+.tickets > div{
+    border-top: solid 2px black;
+    padding: 10px;
+    button{
+        font-family: $font-family1;
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border: solid 2px black;
+        background-color: $primary-color;
+        color: $secondary-color;
+        transition-duration: 0.5s;
+    }
+    button:hover{
+        background-color: $secondary-color;
+        color: $primary-color;
+        transition-duration: 0.5s;
+    }
+}
+
+// theme
+.theme-button{
+    padding: 30px;
+    button{
+        border: solid 5px black;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: $primary-color;
+        transition-duration: 0.5s;
+    }
+}
+.darkmode{
+    background-color: $secondary-color;
+    color: $primary-color;
+    .header{
+        background-color: $primary-color;
+        color: $secondary-color;
+        transition-duration: 1s;
+    }
+    .scroll-watcher{
+        background-color: $primary-color;
+    }
+    .youtube-video iframe{
+        border: solid 5px $primary-color;
+        transition-duration: 0.5s;
+    }
+    .youtube{
+        button{
+            border: solid 2px $primary-color;
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+        button:hover{
+            background-color: $primary-color;
+            color: $secondary-color;
+        }
+    }
+    .fixed-image{
+        border-bottom: solid 5px $primary-color;
+        transition-duration: 0.5s;
+    }
+    .tickets > div{
+        border-top: solid 2px $primary-color;
+        button{
+            border: solid 2px $primary-color;
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+        button:hover{
+            background-color: $primary-color;
+            color: $secondary-color;
+        }
+    }
+    .theme-button{
+        button{
+            border: solid 5px $primary-color;
+            background-color: $secondary-color;
+            transition-duration: 1s;
+        }
+    }
+    transition-duration: 0.5s;
+}
+
+// size for tablet
+@media only screen and (max-width: 1099px){  
+    body{
+        h1{
+            font-size: 40px;
+        }
+    }
+    // header
+    .header{
+        .option{
+            display: none;
+        }
+        .logo{
+            padding-top: 50px;
+            img{
+                width: 700px;
+                height: auto;
+            }
+        }
+    }
+    // fixed elements
+    .fixed-image{
+        img{
+            width: 200px;
+            height: auto;
+        }
+    }
+    // youtube
+    .youtube{
+        iframe{
+            width:700px;
+            height: 394px;
+        }
+        button{
+            font-size: 20px;
+        }
+    }
+    // shop
+    .vinyl{
+        display: grid;
+        #vinylcontainer1{
+            padding-bottom: 50px;
+            grid-column: 1;
+            grid-row: 1;
+        }
+        #vinylcontainer2{
+            padding-bottom: 50px;
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #vinylcontainer3{
+            padding-bottom: 50px;
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
+    .merchandise{
+        #merch1{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        #merch2{
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #merch3{
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
+    .tickets{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+@media only screen and (max-width: 711px){
+    // header
+    .header{
+        .logo{
+            height: 100px;
+            padding-top: 20px;
+            img{
+                width: 500px;
+                height: auto;
+            }
+        }
+    }
+    // youtube
+    .youtube{
+        margin-top: 100px;
+        iframe{
+            width: 500px;
+            height: 281px;
+        }
+    }
+    // fixed elements
+    .fixed-image{
+        img{
+            width: 130px;
+            height: auto;
+        }
     }
 }
