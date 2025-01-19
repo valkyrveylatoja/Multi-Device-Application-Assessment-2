@@ -114,7 +114,7 @@ body{
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
-    adding-bottom: 50px;
+    padding-bottom: 50px;
 }
 .vinyl{
     @include shop_layout;
